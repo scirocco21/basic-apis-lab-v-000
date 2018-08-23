@@ -11,6 +11,9 @@ class RepositoriesController < ApplicationController
         req.params['client_secret'] = '71bddb68458ccae111f48b00a6430ada6354ae2d'
         req.params[:query] = query
       end
+      body = JSON.parse(@resp.body)
+      if @resp.success?
+        @repos = resp.body[:items]
     end
   end
 end
