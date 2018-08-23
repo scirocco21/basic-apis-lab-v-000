@@ -8,7 +8,7 @@
 <div>
   <p>Results:</p>
   <% if @repos %>
-    <% @repos.each.do |repo| %>
+    <% @repos.each do |repo| %>
       <ul>
         <li><%= repo["name"] %></li>
       </ul>
