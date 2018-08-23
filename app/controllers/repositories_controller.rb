@@ -13,7 +13,7 @@ class RepositoriesController < ApplicationController
       end
       body = JSON.parse(@resp.body)
       if @resp.success?
-        @repos = resp.body[:items]
+        @repos = body[:reponse][:items]
     end
   end
 end
