@@ -10,8 +10,8 @@
   <% if @repos %>
     <% @repos.each do |repo| %>
       <ul>
-        <li><%= link_to repo["name"], repo[:html_url] %>
-          
+        <li><%= link_to repo["name"], repo["html_url"] %>
+          <%= repo["description"] %>
         </li>
       </ul>
     <% end %>
